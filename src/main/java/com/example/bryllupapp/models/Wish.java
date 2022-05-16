@@ -4,6 +4,7 @@ public class Wish {
     private String name;
     private String description;
     private String url;
+    private int price;
     private boolean isReserved;
 
 
@@ -33,6 +34,14 @@ public class Wish {
 
     public boolean isReserved() {
         return isReserved;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public void setReserved(boolean reserved) {

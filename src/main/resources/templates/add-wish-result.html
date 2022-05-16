@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Gemt ønske</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{style.css}"  type="text/css">
+    <link rel="stylesheet" th:href="@{fragment.css}"  type="text/css">
+
+
+</head>
+
+<body>
+<br>
+
+
+<nav>
+    <th:block th:replace="fragments/navigator :: nav"></th:block>
+</nav>
+
+<div class="whiteboard">
+    <div class="tabel">
+        <h1>Ønsket er nu gemt❤️</h1>
+        <section>
+            <table>
+                <tr>
+                    <th>Ønske</th>
+                    <th>Detaljer</th>
+                    <th>Pris</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td><p th:text="${wish.name}"></p></td>
+                    <td><p th:text="${wish.description}"></p></td>
+                    <td><p th:text="${wish.price}"></p></td>
+                    <td><p th:text="${wish.url}"></p></td>
+                </tr>
+            </table>
+            <a th:href="addwish">
+                <button class="goto_button">
+                    Tilføj et ønske
+                </button></a>
+            <a href="/"><button class="goto_button">
+                Hjem
+            </button>
+            </a>
+
+        </section>
+    </div>
+</body>
+
+<br>
+</div>
+<!--Side navigator -->
+</html>

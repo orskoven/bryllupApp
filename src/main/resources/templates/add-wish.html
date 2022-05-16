@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj ønsker💝</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{style.css}"  type="text/css">
+    <link rel="stylesheet" th:href="@{fragment.css}"  type="text/css">
+
+
+</head>
+
+<body>
+<br>
+
+
+<nav>
+    <th:block th:replace="fragments/navigator :: nav"></th:block>
+</nav>
+
+<div class="whiteboard">
+    <div class="tabel">
+        <h1>Tilføj ønsker, skat💝</h1>
+        <div th:text="${errormessage}" th:if="${errormessage}" style="color: red"></div>
+        <form action="#" th:action="@{/addwish}" th:object="${wish}" method="post">
+            <p>Ønske: <input type="text" th:field="*{name}" /></p>
+            <p>Detaljer: <input type="text" th:field="*{description}"/></p>
+            <p>Pris: <input type="text" th:field="*{price}"/></p>
+            <p>Link til ønske: <input type="text" th:field="*{url}"/></p>
+            <p><input type="submit" value="Gem" /> <input type="reset" value="Nulstil felterne" /></p>
+            <a href="/"><button class="goto_button">
+                Hjem
+            </button>
+            </a>
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
